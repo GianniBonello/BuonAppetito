@@ -1,0 +1,21 @@
+spring:
+  quartz:
+    job-store-type: memory
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: MyScheduler
+            instanceId: AUTO
+
+  datasource:
+    url: "jdbc:mysql://localhost:3306/buon_appetito"
+    username: "root"
+    password: "root"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
